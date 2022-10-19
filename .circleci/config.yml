@@ -18,6 +18,9 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: "What branch am I on now?"
+          command: echo $CIRCLE_BRANCH
+      - run:
           name: Build
           command: |
             if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
@@ -35,9 +38,12 @@ jobs:
       - attach_workspace:
           at: .
       - run:
+          name: "What branch am I on now?"
+          command: echo $CIRCLE_BRANCH
+      - run:
           name: Deploy
           command: |
-            if [ $CIRCLE_BRANCH = 'main' ]; then
+            if [ $CIRCLE_BRANCH = 'circleci-project-setup' ]; then
               aws s3 sync build s3://ci-cd-s3-example --delete --exact-timestamps;
             fi
 workflows:
