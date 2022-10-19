@@ -48,6 +48,7 @@ workflows:
             branches:
               only:
                 - circleci-project-setup
+                - main
       - deploy:
           requires:
             - build
@@ -55,3 +56,4 @@ workflows:
             branches:
               only:
                 - circleci-project-setup
+                - main
