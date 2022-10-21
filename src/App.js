@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React and CircleCi !!!
+          Learn React and CircleCi(CI-CD) !!!
         </a>
       </header>
     </div>
