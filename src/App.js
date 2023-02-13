@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          CodeCommit CI/CD !!!
+          CircleCi CI/CD !!!
         </a>
       </header>
     </div>
